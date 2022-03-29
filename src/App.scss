@@ -1,0 +1,161 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: #1f2632;
+    color:#f7f7f7;
+    font-family: "Manrope", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+.mainPage{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
+    .quoteBox{
+        position:relative;
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        height:auto;
+        min-height: 325px;
+        width:30%;
+        min-width: 500px;
+        background-color: #323a49;
+        border-radius: 1rem;
+        padding:2rem;
+        transition:250ms;
+        >p{
+            min-height:50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color:#52ffa8;
+            letter-spacing:0.2rem;
+        }
+        >h1{
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            text-align: center;
+            min-height:125px;
+
+        }
+        .divider{
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            text-align: center;
+            font-size:2rem;
+            width:100%;
+            min-height:75px;
+            &:before{
+                margin-right:1rem;
+                content:"";
+                height:1px;
+                width:40%;
+                background-color:#4e5d73;
+            }
+            &:after{
+                margin-left:1rem;
+                content:"";
+                height:1px;
+                width:40%;
+                background-color:#4e5d73;
+            }
+        }
+        .randomBtn{
+            position:absolute;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            color:#1f2632;
+            font-size: 2rem;
+            bottom:-2.5rem;
+            width:5rem;
+            height:5rem;
+            background-color:#52ffa8;
+            border-radius: 50%;
+            cursor:pointer;
+            &:hover{
+                animation: spin 2s linear;
+                animation-iteration-count: infinite;
+                @keyframes spin {
+                    to{
+                        transform:rotate(360deg)
+                    }
+                }
+            }
+            &:active{
+                animation: click 500ms ease-out;
+                @keyframes click{
+                    0%{
+                        transform:rotate(0);
+                    }
+                    50%{
+                        transform:rotate(180deg);
+                        box-shadow: 0 0 2.5rem #52ffa969, 0 0 5px #08080869;
+                    }
+                    100%{
+                        transform:rotate(360deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 543px){
+    .mainPage{
+        .quoteBox{
+            height:auto;
+            min-height: auto;
+            width:95%;
+            min-width: auto;
+            padding:1rem;
+            >h1{
+                font-size:1.5rem;
+            }
+            .divider{
+                font-size:1.75rem;
+                min-height:100px;
+            }
+            .randomBtn{
+                font-size: 1.75rem;
+                bottom:-2rem;
+                width:4rem;
+                height:4rem;
+                &:hover{
+                    @keyframes spin {
+                        to{
+                            transform:rotate(0deg)
+                        }
+                    }
+                }
+                &:active{
+                    animation: click 500ms ease-out;
+                    @keyframes click{
+                        0%{
+                            transform:rotate(0);
+                        }
+                        50%{
+                            transform:rotate(180deg);
+                            box-shadow: 0 0 2.5rem #52ffa969, 0 0 5px #08080869;
+                        }
+                        100%{
+                            transform:rotate(360deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

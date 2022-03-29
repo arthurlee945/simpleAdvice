@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/simpleAdvice/static/css/main.e206bef1.css",
+    "main.js": "/simpleAdvice/static/js/main.ef8896c1.js",
+    "index.html": "/simpleAdvice/index.html",
+    "main.e206bef1.css.map": "/simpleAdvice/static/css/main.e206bef1.css.map",
+    "main.ef8896c1.js.map": "/simpleAdvice/static/js/main.ef8896c1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e206bef1.css",
+    "static/js/main.ef8896c1.js"
+  ]
+}
